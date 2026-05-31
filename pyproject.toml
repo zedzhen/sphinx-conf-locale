@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=81"]
+
+[project]
+name = "sphinx-conf-locale"
+description = "Adds internationalization 'conf.py ' for sphinx"
+readme = "readme.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Ярыкин Евгений", email = "pypi@zedzhen.ru" }
+]
+dependencies = [
+    'sphinx>=8,<10',
+    'babel~=2.17',
+]
+dynamic = ["version"]
+
+[project.urls]
+source = "https://github.com/zedzhen/sphinx-conf-locale"
+
+[project.optional-dependencies]
+dev = [
+    'black~=26.5',
+    'isort~=8.0',
+    "build==1.5.*",
+    "pre-commit~=4.6",
+]
+
+[project.scripts]
+sphinx-conf-locale = "sphinx_conf_locale.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "sphinx_conf_locale.__version__" }
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+combine_as_imports = true
