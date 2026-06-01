@@ -1,4 +1,4 @@
-Adds internationalization 'conf.py ' for sphinx
+Adds internationalization 'conf.py' for sphinx
 
 ## Install
 ```console
