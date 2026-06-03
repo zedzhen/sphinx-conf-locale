@@ -5,15 +5,21 @@ updates:
     schedule:
       interval: "daily"
       timezone: "Europe/Moscow"
+    assignees:
+      - "zedzhen"
 
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "daily"
       timezone: "Europe/Moscow"
+    assignees:
+      - "zedzhen"
 
   - package-ecosystem: pre-commit
     directory: "/"
     schedule:
       interval: "daily"
       timezone: "Europe/Moscow"
+    assignees:
+      - "zedzhen"
